@@ -13,7 +13,7 @@ export default function App() {
   useEffect(() => {
     /* Google initailization */
     google.accounts.id.initialize({
-      client_id: process.env.AUTH_KEY,
+      client_id: import.meta.env.VITE_CLIENT_ID,
       callback: responseCallback,
     });
     google.accounts.id.renderButton(document.getElementById("signinDiv"), {
